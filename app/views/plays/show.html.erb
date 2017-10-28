@@ -1,3 +1,9 @@
 <h2><%= @play.title %><h2>
 <h4><%= @play.director %><h4>
 <p><%= @play.description %><p>
+
+<%= link_to "back", root_path %>
+<%= link_to "edit", edit_play_path(@play) %>
+<%= link_to "delete", play_path(@play),method: :delete, data: {
+    confirm: "are you sure?" 
+} %>
